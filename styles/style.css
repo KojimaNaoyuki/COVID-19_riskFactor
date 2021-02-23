@@ -149,10 +149,12 @@ body h1, body h2, body h3, body p {
 
 .global-contents .result__inner__infection-rate > img {
   width: 60px;
+  height: 100%;
   opacity: 0.8;
 }
 
 .global-contents .result__inner__infection-rate h3 {
+  width: 100%;
   line-height: 60px;
   font-size: 32px;
   font-weight: bold;

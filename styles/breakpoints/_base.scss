@@ -106,14 +106,44 @@ body {
                     opacity: 0.8;
                 }
                 h3 {
-                    width: 100%;
+                    overflow-x: scroll;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    width: 75%;
                     line-height: 60px;
                     font-size: 32px;
                     font-weight: bold;
                     text-align: center;
-                    opacity: 0.9;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
                 }
             }
         }
+
+        &__heading {
+            display: flex;
+            justify-content: space-between;
+
+            & > img {
+                width: 18px;
+                transform: translateX(-10px) translateY(20px);
+                animation: sk-arrow-right-img 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+
+@keyframes sk-arrow-right-img {
+    0% {
+        transform: translateX(-10px) translateY(20px);
+    }
+    50% {
+        transform: translateX(0) translateY(20px);
+    }
+    100% {
+        transform: translateX(-10px) translateY(20px);
     }
 }

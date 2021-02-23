@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Risk Factor</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -17,46 +17,59 @@
         <section class="user-info">
             <div class="box">
                 <h2 class="heading-font">お住まいの地域</h2>
-                <select name="" id="" class="select-list">
+                <select name="" id="user-live" class="select-list">
                     <option value="" hidden>select</option>
-                    <option value="">東京</option>
-                    <option value="">埼玉県</option>
-                    <option value="">神奈川県</option>
+                    <option value="toukyou">東京</option>
+                    <option value="saitama">埼玉県</option>
+                    <option value="kanagawa">神奈川県</option>
                 </select>
                 <h2 class="heading-font">今日の感染者数</h2>
-                <input type="text" class="input-text" placeholder="0">
+                <input type="number" class="input-text" placeholder="0" id="infected-person">
 
                 <div class="user-info__btn">
-                    <button class="side-come-out-btn">決定</button>
+                    <button class="side-come-out-btn" id="decision-btn">決定</button>
                 </div>
             </div>
         </section>
 
         <section class="result">
             <div class="result__inner">
-                <h2 class="heading-font">感染率</h2>
+                <div class="result__heading">
+                    <h2 class="heading-font">感染率</h2>
+                    <img src="./styles/img/arrow-right.svg" alt="arrow-right">
+                </div>
                 <div class="result__inner__infection-rate">
                     <img src="./styles/img/virus-icon.svg" alt="people">
-                    <h3 id="infection-rate-num">0.005%</h3>
+                    <h3 id="infection-rate-num"></h3>
                 </div>
             </div>
 
             <div class="result__inner">
-                <h2 class="heading-font">1000人中</h2>
+                <div class="result__heading">
+                    <h2 class="heading-font">1000人中</h2>
+                    <img src="./styles/img/arrow-right.svg" alt="arrow-right">
+                </div>
                 <div class="result__inner__infection-rate">
                     <img src="./styles/img/people.svg" alt="people">
-                    <h3 id="infection-rate-sizeM">0.0005人</h3>
+                    <h3 id="infection-rate-sizeM"></h3>
                 </div>
             </div>
 
             <div class="result__inner">
-                <h2 class="heading-font">100人中</h2>
+                <div class="result__heading">
+                    <h2 class="heading-font">100人中</h2>
+                    <img src="./styles/img/arrow-right.svg" alt="arrow-right">
+                </div>
                 <div class="result__inner__infection-rate">
                     <img src="./styles/img/people2.svg" alt="people">
-                    <h3 id="infection-rate-sizeS">0.00000人</h3>
+                    <h3 id="infection-rate-sizeS"></h3>
                 </div>
             </div>
         </section>
     </div>
+
+    <script src="./scripts/libs/infection-rate-cal.js"></script>
+    <script src="./scripts/data/data_population.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

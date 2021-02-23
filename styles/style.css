@@ -1,0 +1,162 @@
+.side-come-out-btn {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none !important;
+  cursor: pointer;
+  padding: 0;
+  width: 100px;
+  height: 35px;
+  color: #c5c5c5;
+  border: solid 1px #c5c5c5;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.side-come-out-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  z-index: -10;
+}
+
+.side-come-out-btn:hover {
+  color: white;
+}
+
+.side-come-out-btn:hover::before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+body {
+  background-color: #000221;
+}
+
+body h1, body h2, body h3, body p {
+  margin: 0;
+}
+
+.font-big-title, .global-contents .header > h1 {
+  font-size: 28px;
+}
+
+.heading-font {
+  font-size: 20px;
+}
+
+.content-width, .global-contents .user-info, .global-contents .result__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mtb-m, .global-contents .select-list, .global-contents .input-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mtb-l, .global-contents .user-info {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.global-contents {
+  color: #c5c5c5;
+}
+
+.global-contents .header {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  background-color: #400334;
+}
+
+.global-contents .header > h1 {
+  margin: 0;
+}
+
+.global-contents .header > h1 > img {
+  margin: 0 10px;
+  width: 28px;
+}
+
+.global-contents .box {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #400334;
+  border-radius: 10px;
+}
+
+.global-contents .select-list {
+  position: relative;
+  width: 100%;
+  color: #c5c5c5;
+  background-color: transparent;
+}
+
+.global-contents .select-list > option {
+  background-color: #d4d4d4;
+  color: black;
+}
+
+.global-contents .input-text {
+  width: 100%;
+  color: #c5c5c5;
+  border: solid 1px #c5c5c5;
+  background-color: transparent;
+  outline: none;
+}
+
+.global-contents .user-info {
+  margin-bottom: 80px;
+}
+
+.global-contents .user-info__btn {
+  text-align: center;
+}
+
+.global-contents .result {
+  background-color: #400334;
+}
+
+.global-contents .result__inner {
+  padding: 10px;
+}
+
+.global-contents .result__inner__infection-rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0;
+}
+
+.global-contents .result__inner__infection-rate > img {
+  width: 60px;
+  opacity: 0.8;
+}
+
+.global-contents .result__inner__infection-rate h3 {
+  width: 100%;
+  line-height: 60px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=style.css.map */

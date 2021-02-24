@@ -145,6 +145,7 @@ body h1, body h2, body h3, body p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px 0;
+  height: 90px;
 }
 
 .global-contents .result__inner__infection-rate > img {
@@ -175,6 +176,7 @@ body h1, body h2, body h3, body p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 24px;
 }
 
 .global-contents .result__heading > img {

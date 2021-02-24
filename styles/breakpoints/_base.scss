@@ -99,6 +99,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 padding: 15px 0;
+                height: 90px;
 
                 & > img {
                     width: 60px;
@@ -125,6 +126,7 @@ body {
         &__heading {
             display: flex;
             justify-content: space-between;
+            height: 24px;
 
             & > img {
                 width: 18px;

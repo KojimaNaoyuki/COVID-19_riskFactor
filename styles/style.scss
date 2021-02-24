@@ -2,3 +2,7 @@
 @import './modules/side-come-out-btn';
 
 @import './breakpoints/base';
+
+@media (min-width: 860px) {
+    @import './breakpoints/pc';
+}

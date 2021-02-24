@@ -81,6 +81,7 @@ body {
     & .user-info {
         @extend .content-width;
         @extend .mtb-l;
+        max-width: 660px;
         margin-bottom: 80px;
 
         &__btn {
@@ -129,11 +130,20 @@ body {
             height: 24px;
 
             & > img {
+                display: none;
                 width: 18px;
                 transform: translateX(-10px) translateY(20px);
                 animation: sk-arrow-right-img 2s;
                 animation-iteration-count: infinite;
             }
+        }
+    }
+}
+
+.calRuned {
+    & .result__heading {
+        & > img {
+            display: block;
         }
     }
 }

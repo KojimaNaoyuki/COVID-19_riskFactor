@@ -1,0 +1,7 @@
+.calRuned {
+    & .result__heading {
+        & > img {
+            display: none;
+        }
+    }
+}

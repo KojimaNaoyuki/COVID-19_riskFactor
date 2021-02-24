@@ -1,6 +1,4 @@
 .side-come-out-btn {
-  position: relative;
-  overflow: hidden;
   text-decoration: none;
   outline: none !important;
   cursor: pointer;
@@ -10,34 +8,12 @@
   color: #c5c5c5;
   border: solid 1px #c5c5c5;
   background-color: transparent;
-  z-index: 0;
-}
-
-.side-come-out-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  z-index: -10;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .side-come-out-btn:hover {
-  color: white;
-}
-
-.side-come-out-btn:hover::before {
-  -webkit-transform: none;
-          transform: none;
+  background-color: #732f63;
 }
 
 body {
@@ -122,6 +98,7 @@ body h1, body h2, body h3, body p {
 }
 
 .global-contents .user-info {
+  max-width: 660px;
   margin-bottom: 80px;
 }
 
@@ -180,6 +157,7 @@ body h1, body h2, body h3, body p {
 }
 
 .global-contents .result__heading > img {
+  display: none;
   width: 18px;
   -webkit-transform: translateX(-10px) translateY(20px);
           transform: translateX(-10px) translateY(20px);
@@ -187,6 +165,10 @@ body h1, body h2, body h3, body p {
           animation: sk-arrow-right-img 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.calRuned .result__heading > img {
+  display: block;
 }
 
 @-webkit-keyframes sk-arrow-right-img {
@@ -216,6 +198,12 @@ body h1, body h2, body h3, body p {
   100% {
     -webkit-transform: translateX(-10px) translateY(20px);
             transform: translateX(-10px) translateY(20px);
+  }
+}
+
+@media (min-width: 860px) {
+  .calRuned .result__heading > img {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

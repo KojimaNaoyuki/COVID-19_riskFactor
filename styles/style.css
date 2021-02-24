@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .side-come-out-btn {
   text-decoration: none;
   outline: none !important;
@@ -28,16 +29,16 @@ body h1, body h2, body h3, body p {
   font-size: 28px;
 }
 
-.heading-font {
+.heading-font, .global-contents .result .information__box > h2 {
   font-size: 20px;
 }
 
-.content-width, .global-contents .user-info, .global-contents .result__inner {
+.content-width, .global-contents .user-info, .global-contents .info-display, .global-contents .result__inner {
   width: 90%;
   margin: 0 auto;
 }
 
-.mtb-m, .global-contents .select-list, .global-contents .input-text {
+.mtb-m, .global-contents .select-list, .global-contents .input-text, .global-contents .info-display {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -99,19 +100,85 @@ body h1, body h2, body h3, body p {
 
 .global-contents .user-info {
   max-width: 660px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .global-contents .user-info__btn {
   text-align: center;
 }
 
+.global-contents .info-display {
+  text-align: right;
+}
+
+.global-contents .info-display > button {
+  position: relative;
+  z-index: 100;
+  padding: 0 15px 0 1em;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  background-color: #2a522c;
+  color: #c5c5c5;
+  outline: none;
+}
+
+.global-contents .info-display > button::after {
+  content: '▶';
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 12px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .global-contents .result {
+  position: relative;
   background-color: #400334;
+  overflow: hidden;
+}
+
+.global-contents .result .information {
+  width: 100%;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: -104px;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+
+.global-contents .result .information > span {
+  margin: 0 10px;
+}
+
+.global-contents .result .information__box {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.global-contents .result .information__box::-webkit-scrollbar {
+  display: none;
+}
+
+.global-contents .result .information__box > h3 {
+  line-height: 60px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .global-contents .result__inner {
   padding: 10px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .global-contents .result__inner__infection-rate {
@@ -169,6 +236,32 @@ body h1, body h2, body h3, body p {
 
 .calRuned .result__heading > img {
   display: block;
+}
+
+.info-open .info-display > button::after {
+  content: '▶';
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.info-open .information {
+  -webkit-transform: translateY(104px);
+          transform: translateY(104px);
+}
+
+.info-open.result {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.info-open.result::-webkit-scrollbar {
+  display: none;
+}
+
+.info-open .result__inner {
+  -webkit-transform: translateY(104px);
+          transform: translateY(104px);
 }
 
 @-webkit-keyframes sk-arrow-right-img {

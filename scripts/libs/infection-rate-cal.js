@@ -6,6 +6,8 @@ class InfectionRateCal {
         this.DOM.infectionRateNumDisplay = document.querySelector('#infection-rate-num');
         this.DOM.infectionRateSizeMDisplay = document.querySelector('#infection-rate-sizeM');
         this.DOM.infectionRateSizeSDisplay = document.querySelector('#infection-rate-sizeS');
+        this.DOM.populationDisplay = document.querySelector('#population-display');
+        this.DOM.infectedDisplay = document.querySelector('#infected-display');
         this.data = new Data();
 
         this.userLive = '';
@@ -32,7 +34,7 @@ class InfectionRateCal {
     }
 
     cal() {
-        this._getData();
+        this._getData(); //データを取得
 
         this.infectionRateNum = (Number(this.infectedPerson) / Number(this.usePopulationData)) * 100;
         console.log('感染者 : ' + this.infectionRateNum + '%');
@@ -50,5 +52,8 @@ class InfectionRateCal {
         this.DOM.infectionRateNumDisplay.innerHTML = this.infectionRateNum + '&nbsp;%';
         this.DOM.infectionRateSizeMDisplay.innerHTML = this.infectionRateSizeMNum + '&nbsp;people';
         this.DOM.infectionRateSizeSDisplay.innerHTML = this.infectionRateSizeSNum + '&nbsp;people';
+
+        this.DOM.populationDisplay.innerHTML = this.usePopulationData + '&nbsp;人';
+        this.DOM.infectedDisplay.innerHTML = this.infectedPerson + '&nbsp;人';
     }
 }

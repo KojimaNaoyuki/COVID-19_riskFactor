@@ -82,19 +82,80 @@ body {
         @extend .content-width;
         @extend .mtb-l;
         max-width: 660px;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
 
         &__btn {
             text-align: center;
         }
     }
+    
+    & .info-display {
+        @extend .content-width;
+        @extend .mtb-m;
+        text-align: right;
+        
+        & > button {
+            position: relative;
+            z-index: 100;
+            padding: 0 15px 0 1em;
+            font-size: 18px;
+            border: none;
+            border-radius: 15px;
+            background-color: #2a522c;
+            color: $baseFontColor;
+            outline: none;
+            
+            &::after {
+                content: '▶';
+                display: inline-block;
+                margin-left: 5px;
+                font-size: 12px;
+                transition: all 0.4s;
+            }
+        }
+    }
 
     & .result {
+        position: relative;
         background-color: $impactBgColor;
+        overflow: hidden;
+
+        & .information {
+            width: 100%;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: -104px;
+            left: 0;
+            transition: transform 0.6s;
+
+            & > span {
+                margin: 0 10px;
+            }
+            &__box {
+                overflow-x: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                & > h2 {
+                    @extend .heading-font;
+                }
+                & > h3 {
+                    line-height: 60px;
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+            } 
+        }
 
         &__inner {
             @extend .content-width;
             padding: 10px;
+            transition: all 0.6s;
 
             &__infection-rate {
                 display: flex;
@@ -145,6 +206,31 @@ body {
         & > img {
             display: block;
         }
+    }
+}
+
+.info-open {
+    & .info-display {
+        & > button {
+            &::after {
+                content: '▶';
+                transform: rotate(90deg);
+            }
+        }
+    }
+    & .information {
+        transform: translateY(104px);
+    }
+    &.result {
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    & .result__inner {
+        transform: translateY(104px);
     }
 }
 

@@ -28,11 +28,26 @@ class InfectionRateCal {
                 this.usePopulationData = this.populationData[i];
             }
         }
+        this._inputJudg(this.infectedPerson, 0, '感染者数には数値を入力してください');
         console.log('user live : ' + this.userLive);
         console.log('infected person : ' + this.infectedPerson);
         console.log('use population data : ' + this.usePopulationData);
     }
 
+    _inputJudg(text, pattern, errMsg) {
+        let exp = ''; //正規表現パターンを格納
+        switch(pattern) {
+            case 0:
+                exp = '/^[0-9]+$/';
+                break;
+            default:
+                exp = '';
+        }
+        if(!exp.search(text)) {
+            alert(errMsg);
+        }
+    }
+ 
     cal() {
         this._getData(); //データを取得
 

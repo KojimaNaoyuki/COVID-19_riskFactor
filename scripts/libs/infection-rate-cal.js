@@ -28,7 +28,7 @@ class InfectionRateCal {
                 this.usePopulationData = this.populationData[i];
             }
         }
-        this._inputJudg(this.infectedPerson, 0, '感染者数には数値を入力してください');
+        this.infectedPerson = this._inputJudg(this.infectedPerson, 0, '感染者数には数値を入力してください');
         console.log('user live : ' + this.userLive);
         console.log('infected person : ' + this.infectedPerson);
         console.log('use population data : ' + this.usePopulationData);
@@ -45,7 +45,9 @@ class InfectionRateCal {
         }
         if(!exp.search(text)) {
             alert(errMsg);
+            return 0;
         }
+        return text;
     }
  
     cal() {

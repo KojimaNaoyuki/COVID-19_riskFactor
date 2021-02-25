@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('main.js');
 
+    alert('県内の感染率を求めることができます');
+
     new Main();
 });
 

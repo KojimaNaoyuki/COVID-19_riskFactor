@@ -65,8 +65,12 @@ body h1, body h2, body h3, body p {
   padding: 80px 10px 0 10px;
   margin: 0 auto;
   width: 80%;
+  max-width: 580px;
   background-color: #400334;
-  border-radius: 15px;
+}
+
+.start-open__box > p {
+  text-align: center;
 }
 
 .start-open__box__btn-inner {

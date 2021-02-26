@@ -37,12 +37,17 @@ body {
     color: $baseFontColor;
     transition: all 0.5s;
 
+    
     &__box {
         padding: 80px 10px 0 10px; 
         margin: 0 auto;
         width: 80%;
+        max-width: 580px;
         background-color: $impactBgColor;
-        border-radius: 15px;
+        
+        & > p {
+            text-align: center;
+        }
 
         &__btn-inner {
             padding: 50px 10px 20px 10px;

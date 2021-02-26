@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('main.js');
 
-    alert('県内の感染率を求めることができます');
-
+    // alert('県内の感染率を求めることができます');
+    
     new Main();
 });
 
@@ -15,11 +15,17 @@ class Main {
         this.DOM.result = document.querySelector('.result');
         this.DOM.infoBtn = document.querySelector('#info-btn');
         this.DOM.global = document.querySelector('.global-contents');
+        this.DOM.body = document.querySelector('body');
+        this.DOM.startOpenBtn = document.querySelector('#start-open-btn');
         this._addEvent();
     }
 
     _arrowAdd() {
         this.DOM.result.classList.add('calRuned');
+    }
+
+    _startOpenAdd() {
+        this.DOM.body.classList.add('start-open-close');
     }
 
     _toggleInfo() {
@@ -33,5 +39,6 @@ class Main {
         this.DOM.btn.addEventListener('click', this._arrowAdd.bind(this));
 
         this.DOM.infoBtn.addEventListener('click', this._toggleInfo.bind(this));
+        this.DOM.startOpenBtn.addEventListener('click', this._startOpenAdd.bind(this));
     }
 }

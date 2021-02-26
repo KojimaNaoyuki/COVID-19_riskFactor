@@ -48,8 +48,35 @@ body h1, body h2, body h3, body p {
   margin-bottom: 40px;
 }
 
+.start-open {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1000;
+  color: #c5c5c5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.start-open__box {
+  padding: 80px 10px 0 10px;
+  margin: 0 auto;
+  width: 80%;
+  background-color: #400334;
+  border-radius: 15px;
+}
+
+.start-open__box__btn-inner {
+  padding: 50px 10px 20px 10px;
+  text-align: right;
+}
+
 .global-contents {
   color: #c5c5c5;
+  opacity: 0.4;
 }
 
 .global-contents .header {
@@ -232,6 +259,15 @@ body h1, body h2, body h3, body p {
           animation: sk-arrow-right-img 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.start-open-close .start-open {
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+}
+
+.start-open-close .global-contents {
+  opacity: 1;
 }
 
 .calRuned .result__heading > img {

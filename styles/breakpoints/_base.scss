@@ -27,8 +27,33 @@ body {
     margin-bottom: 40px;
 }
 
+.start-open {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    color: $baseFontColor;
+    transition: all 0.5s;
+
+    &__box {
+        padding: 80px 10px 0 10px; 
+        margin: 0 auto;
+        width: 80%;
+        background-color: $impactBgColor;
+        border-radius: 15px;
+
+        &__btn-inner {
+            padding: 50px 10px 20px 10px;
+            text-align: right;
+        }
+    }
+}
+
 .global-contents {
     color: $baseFontColor;
+    opacity: 0.4;
     & .header {
         display: block;
         width: 100%;
@@ -198,6 +223,15 @@ body {
                 animation-iteration-count: infinite;
             }
         }
+    }
+}
+
+.start-open-close {
+    & .start-open {
+        transform: translateY(-50%) scale(0);
+    }
+    & .global-contents {
+        opacity: 1;
     }
 }
 

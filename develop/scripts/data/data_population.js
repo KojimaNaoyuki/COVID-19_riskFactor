@@ -7,3 +7,5 @@ class Data {
         return this.dataPopulation;
     }
 }
+
+export default Data;

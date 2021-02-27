@@ -1,3 +1,5 @@
+import Data from '../data/data_population.js';
+
 class InfectionRateCal {
     constructor() {
         this.DOM = {};
@@ -74,3 +76,5 @@ class InfectionRateCal {
         this.DOM.infectedDisplay.innerHTML = this.infectedPerson + '&nbsp;人';
     }
 }
+
+export default InfectionRateCal;

@@ -1,10 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('main.js');
-
-    // alert('県内の感染率を求めることができます');
-    
-    new Main();
-});
+import InfectionRateCal from './infection-rate-cal.js';
 
 class Main {
     constructor() {
@@ -42,3 +36,5 @@ class Main {
         this.DOM.startOpenBtn.addEventListener('click', this._startOpenAdd.bind(this));
     }
 }
+
+export default Main;
